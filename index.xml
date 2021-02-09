@@ -1,6 +1,6 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>刘宣辰的博客</title>
+        <title>Blog</title>
         <link>https://neymar-jr.github.io/</link>
         <description>刘宣辰的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>908815829@qq.com (刘宣辰)</managingEditor>
