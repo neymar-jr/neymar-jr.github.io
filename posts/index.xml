@@ -1,12 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Xuanchen&#39;s Blog</title>
-        <link>https://neymar-jr.github.io/</link>
-        <description>刘宣辰的博客</description>
+        <title>所有文章 - Xuanchen&#39;s Blog</title>
+        <link>https://neymar-jr.github.io/posts/</link>
+        <description>所有文章 | Xuanchen&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>908815829@qq.com (刘宣辰)</managingEditor>
-            <webMaster>908815829@qq.com (刘宣辰)</webMaster><lastBuildDate>Wed, 10 Feb 2021 00:36:27 &#43;0800</lastBuildDate>
-            <atom:link href="https://neymar-jr.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+            <webMaster>908815829@qq.com (刘宣辰)</webMaster><lastBuildDate>Wed, 10 Feb 2021 00:36:27 &#43;0800</lastBuildDate><atom:link href="https://neymar-jr.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Blog</title>
     <link>https://neymar-jr.github.io/blog/</link>
     <pubDate>Wed, 10 Feb 2021 00:36:27 &#43;0800</pubDate>
