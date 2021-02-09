@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 刘宣辰的博客</title>
+    <link>https://neymar-jr.github.io/tags/</link>
+    <description>Recent content in Tags on 刘宣辰的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>CC BY 4.0 CN</copyright>
+    <lastBuildDate>Wed, 10 Feb 2021 00:36:27 +0800</lastBuildDate><atom:link href="https://neymar-jr.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS</title>
+      <link>https://neymar-jr.github.io/tags/cs/</link>
+      <pubDate>Wed, 10 Feb 2021 00:36:27 +0800</pubDate>
+      
+      <guid>https://neymar-jr.github.io/tags/cs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>测试</title>
+      <link>https://neymar-jr.github.io/tags/%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Tue, 09 Feb 2021 17:40:09 +0800</pubDate>
+      
+      <guid>https://neymar-jr.github.io/tags/%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

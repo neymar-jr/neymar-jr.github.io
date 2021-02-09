@@ -1,15 +1,20 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>CS - 标签 - Xuanchen&#39;s Blog</title>
-        <link>https://neymar-jr.github.io/tags/cs/</link>
-        <description>CS - 标签 - Xuanchen&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>908815829@qq.com (刘宣辰)</managingEditor>
-            <webMaster>908815829@qq.com (刘宣辰)</webMaster><lastBuildDate>Wed, 10 Feb 2021 00:36:27 &#43;0800</lastBuildDate><atom:link href="https://neymar-jr.github.io/tags/cs/" rel="self" type="application/rss+xml" /><item>
-    <title>Blog</title>
-    <link>https://neymar-jr.github.io/blog/</link>
-    <pubDate>Wed, 10 Feb 2021 00:36:27 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://neymar-jr.github.io/blog/</guid>
-    <description><![CDATA[第一个博客]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS on 刘宣辰的博客</title>
+    <link>https://neymar-jr.github.io/tags/cs/</link>
+    <description>Recent content in CS on 刘宣辰的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>CC BY 4.0 CN</copyright>
+    <lastBuildDate>Wed, 10 Feb 2021 00:36:27 +0800</lastBuildDate><atom:link href="https://neymar-jr.github.io/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog</title>
+      <link>https://neymar-jr.github.io/2021/02/blog/</link>
+      <pubDate>Wed, 10 Feb 2021 00:36:27 +0800</pubDate>
+      
+      <guid>https://neymar-jr.github.io/2021/02/blog/</guid>
+      <description>第一个博客</description>
+    </item>
+    
+  </channel>
 </rss>
