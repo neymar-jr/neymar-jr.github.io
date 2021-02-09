@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>刘宣辰的博客</title>
@@ -6,7 +6,11 @@
     <description>Recent content on 刘宣辰的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Wed, 10 Feb 2021 00:36:27 +0800</lastBuildDate><atom:link href="https://neymar-jr.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Feb 2021 00:36:27 +0800</lastBuildDate>
+    
+        <atom:link href="https://neymar-jr.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>About</title>
       <link>https://neymar-jr.github.io/about/</link>
