@@ -39,7 +39,7 @@
 <meta itemprop="description" content="全自动的彩色眼底图像分割是自动化的眼底疾病筛查系统和辅助诊断系统的基础，能大大改善传统眼底疾病筛查和诊断的流程，降低眼科医生的阅片的工作量，">
 <meta itemprop="datePublished" content="2021-03-03T16:03:59+08:00" />
 <meta itemprop="dateModified" content="2021-03-03T16:03:59+08:00" />
-<meta itemprop="wordCount" content="12050">
+<meta itemprop="wordCount" content="12048">
 
 
 
@@ -293,7 +293,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 12050字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 12048字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 25分 </span>
       </div>
     </div>
@@ -524,72 +524,39 @@ C向量进行L2归一化，最后与第一条分支结果结合。</p>
 <p>2.根据粗略的语义分割结果和网络最深层的特征表示计算出 k组向量，即物体区域表示（Object Region Representations），其中每一个向量对应一个语义类别的特征表示（因为组略的语义分割结果包含了物体区域信息，相当于用每个物体区域的mask和像素特征表示做矩阵乘法），具体是b x c x h x w的Pixel Representations和 b x k x h x w 的转置做矩阵乘法得到b x k x c输出即Object Region Representations。</p>
 <p>3.计算网络最深层输出的像素特征表示PR（Pixel Representations）与计算得到的物体区域特征表示ORR（Object Region Representation）之间的关系矩阵，然后根据每个像素和物体区域特征表示在关系矩阵中的数值把物体区域特征加权求和，得到最后的物体上下文特征表示 OCR (Object Contextual Representation) 。具体是b x k x c的ORR和b x c x h x w的PR做矩阵乘法得到b x k x h x w的输出，再在维度k加上Softmax函数转化为attention map同时也是解码器即PRR（Pixel-Region Relation），再对PRR和ORR做矩阵乘法得到b x c x h x w的OCR。当把物体上下文特征表示 OCR 与网络最深层输入的特征表示拼接之后作为上下文信息增强的特征表示（Augmented Representation），可以基于增强后的特征表示预测每个像素的语义类别。综上，OCR可计算一组物体区域的特征表达用于表示每一类物体的区域特征，然后根据物体区域特征表示与像素特征表示之间的相关性，得到结合物体区域特征的像素特征表示。</p>
 <h1 id="参考文献">参考文献</h1>
-<p>Liu Q, Zou B, Zhao Y, et al. A Deep Gradient Boosting Network for Optic
-Disc and Cup Segmentation[C]//ICASSP 2020-2020 IEEE International
-Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE,
-2020: 971-975. Kirbas C, Quek F A review of vessel extraction techniques
-and algorithms[J]. ACM Computing Surveys, 2004, 36(2): 81-121 Minaee
-S, Boykov Y, Porikli F, et al. Image segmentation using deep learning: A
-survey[J]. arXiv preprint arXiv:2001.05566, 2020. Long J, Shelhamer E,
-Darrell T. Fully convolutional networks for semantic
-segmentation[C]//Proceedings of the IEEE conference on computer vision
-and pattern recognition. 2015: 3431-3440. Ronneberger O, Fischer P, Brox
-T. U-net: Convolutional networks for biomedical image
-segmentation[C]//International Conference on Medical image computing
-and computer-assisted intervention. Springer, Cham, 2015: 234-241. Chen
-L C, Papandreou G, Kokkinos I, et al. Semantic image segmentation with
-deep convolutional nets and fully connected crfs[J]. arXiv preprint
-arXiv:1412.7062, 2014. Chen L C, Papandreou G, Kokkinos I, et al.
-Deeplab: Semantic image segmentation with deep convolutional nets,
-atrous convolution, and fully connected crfs[J]. IEEE transactions on
-pattern analysis and machine intelligence, 2017, 40(4): 834-848. Chen L
-C, Papandreou G, Schroff F, et al. Rethinking atrous convolution for
-semantic image segmentation[J]. arXiv preprint arXiv:1706.05587, 2017.
-Chen L C, Zhu Y, Papandreou G, et al. Encoder-decoder with atrous
-separable convolution for semantic image segmentation[C]//Proceedings
-of the European conference on computer vision (ECCV). 2018: 801-818. Lin
-G, Milan A, Shen C, et al. Refinenet: Multi-path refinement networks for
-high-resolution semantic segmentation[C]//Proceedings of the IEEE
-conference on computer vision and pattern recognition. 2017: 1925-1934.
-Zhao H, Shi J, Qi X, et al. Pyramid scene parsing
-network[C]//Proceedings of the IEEE conference on computer vision and
-pattern recognition. 2017: 2881-2890. Peng C, Zhang X, Yu G, et al.
-Large kernel matters&ndash;improve semantic segmentation by global
-convolutional network[C]//Proceedings of the IEEE conference on
-computer vision and pattern recognition. 2017: 4353-4361. Zhang H, Dana
-K, Shi J, et al. Context encoding for semantic
-segmentation[C]//Proceedings of the IEEE conference on Computer Vision
-and Pattern Recognition. 2018: 7151-7160. Wang X, Girshick R, Gupta A,
-et al. Non-local neural networks[C]//Proceedings of the IEEE
-conference on computer vision and pattern recognition. 2018: 7794-7803.
-Zhao H, Zhang Y, Liu S, et al. Psanet: Point-wise spatial attention
-network for scene parsing[C]//Proceedings of the European Conference
-on Computer Vision (ECCV). 2018: 267-283. Fu J, Liu J, Tian H, et al.
-Dual attention network for scene segmentation[C]//Proceedings of the
-IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019:
-3146-3154. Huang Z, Wang X, Huang L, et al. Ccnet: Criss-cross attention
-for semantic segmentation[C]//Proceedings of the IEEE/CVF
-International Conference on Computer Vision. 2019: 603-612. He J, Deng
-Z, Zhou L, et al. Adaptive pyramid context network for semantic
-segmentation[C]//Proceedings of the IEEE/CVF Conference on Computer
-Vision and Pattern Recognition. 2019: 7519-7528. Hu J, Shen L, Sun G.
-Squeeze-and-excitation networks[C]//Proceedings of the IEEE conference
-on computer vision and pattern recognition. 2018: 7132-7141. Cao Y, Xu
-J, Lin S, et al. Gcnet: Non-local networks meet squeeze-excitation
-networks and beyond[C]//Proceedings of the IEEE/CVF International
-Conference on Computer Vision Workshops. 2019: 0-0. He J, Deng Z, Qiao
-Y. Dynamic multi-scale filters for semantic
-segmentation[C]//Proceedings of the IEEE/CVF International Conference
-on Computer Vision. 2019: 3562-3572. Liu W, Rabinovich A, Berg A C.
-Parsenet: Looking wider to see better[J]. arXiv preprint
-arXiv:1506.04579, 2015. Yuan Y, Chen X, Wang J. Object-contextual
-representations for semantic segmentation[J]. arXiv preprint
-arXiv:1909.11065, 2019.
-朱承璋,邹北骥,向遥,严权峰,梁毅雄,崔锦恺,刘晴.彩色眼底图像视网膜血管分割方法研究进展[J].计算机辅助设计与图形学学报,2015,27(11):2046-2057.
-袁鑫, 郑秀娟, 吉彬, 李淼, 李彬.
-基于多尺度残差卷积神经网络的视杯视盘联合分割. 生物医学工程学杂志, 2020,
-37(5): 875-884. doi: 10.7507/1001-5515.201909006 王思懋.
-深度学习在眼底图像分析中的研究与应用[D].哈尔滨工业大学,2020.</p>
+<p>Liu Q, Zou B, Zhao Y, et al. A Deep Gradient Boosting Network for Optic Disc and Cup Segmentation[C]//ICASSP 2020-2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE,2020: 971-975.</p>
+<p>Kirbas C, Quek F A review of vessel extraction techniques and algorithms[J]. ACM Computing Surveys, 2004, 36(2): 81-121 Minaee S, Boykov Y, Porikli F, et al.</p>
+<p>Image segmentation using deep learning: A survey[J]. arXiv preprint arXiv:2001.05566, 2020. Long J, Shelhamer E, Darrell T.</p>
+<p>Fully convolutional networks for semantic segmentation[C]//Proceedings of the IEEE conference on computer vision and pattern recognition. 2015: 3431-3440. Ronneberger O, Fischer P, Brox T.</p>
+<p>U-net: Convolutional networks for biomedical image segmentation[C]//International Conference on Medical image computing and computer-assisted intervention. Springer, Cham, 2015: 234-241. Chen
+L C, Papandreou G, Kokkinos I, et al.</p>
+<p>Semantic image segmentation with deep convolutional nets and fully connected crfs[J]. arXiv preprint arXiv:1412.7062, 2014. Chen L C, Papandreou G, Kokkinos I, et al.</p>
+<p>Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs[J]. IEEE transactions on pattern analysis and machine intelligence, 2017, 40(4): 834-848. Chen L C, Papandreou G, Schroff F, et al.</p>
+<p>Rethinking atrous convolution for semantic image segmentation[J]. arXiv preprint arXiv:1706.05587, 2017.
+Chen L C, Zhu Y, Papandreou G, et al.</p>
+<p>Encoder-decoder with atrous separable convolution for semantic image segmentation[C]//Proceedings
+of the European conference on computer vision (ECCV). 2018: 801-818. Lin G, Milan A, Shen C, et al.</p>
+<p>Refinenet: Multi-path refinement networks for high-resolution semantic segmentation[C]//Proceedings of the IEEE conference on computer vision and pattern recognition. 2017: 1925-1934. Zhao H, Shi J, Qi X, et al.</p>
+<p>Pyramid scene parsing network[C]//Proceedings of the IEEE conference on computer vision and
+pattern recognition. 2017: 2881-2890. Peng C, Zhang X, Yu G, et al.</p>
+<p>Large kernel matters&ndash;improve semantic segmentation by global convolutional network[C]//Proceedings of the IEEE conference on computer vision and pattern recognition. 2017: 4353-4361. Zhang H, Dana
+K, Shi J, et al.</p>
+<p>Context encoding for semantic segmentation[C]//Proceedings of the IEEE conference on Computer Vision
+and Pattern Recognition. 2018: 7151-7160. Wang X, Girshick R, Gupta A, et al.</p>
+<p>Non-local neural networks[C]//Proceedings of the IEEE conference on computer vision and pattern recognition. 2018: 7794-7803. Zhao H, Zhang Y, Liu S, et al.</p>
+<p>Psanet: Point-wise spatial attention network for scene parsing[C]//Proceedings of the European Conference
+on Computer Vision (ECCV). 2018: 267-283. Fu J, Liu J, Tian H, et al.</p>
+<p>Dual attention network for scene segmentation[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019: 3146-3154. Huang Z, Wang X, Huang L, et al.</p>
+<p>Ccnet: Criss-cross attention for semantic segmentation[C]//Proceedings of the IEEE/CVF International Conference on Computer Vision. 2019: 603-612. He J, Deng Z, Zhou L, et al.</p>
+<p>Adaptive pyramid context network for semantic segmentation[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2019: 7519-7528. Hu J, Shen L, Sun G.</p>
+<p>Squeeze-and-excitation networks[C]//Proceedings of the IEEE conference on computer vision and pattern recognition. 2018: 7132-7141. Cao Y, Xu J, Lin S, et al.</p>
+<p>Gcnet: Non-local networks meet squeeze-excitation networks and beyond[C]//Proceedings of the IEEE/CVF International Conference on Computer Vision Workshops. 2019: 0-0. He J, Deng Z, Qiao Y.</p>
+<p>Dynamic multi-scale filters for semantic segmentation[C]//Proceedings of the IEEE/CVF International Conference on Computer Vision. 2019: 3562-3572. Liu W, Rabinovich A, Berg A C.</p>
+<p>Parsenet: Looking wider to see better[J]. arXiv preprint arXiv:1506.04579, 2015. Yuan Y, Chen X, Wang J.</p>
+<p>Object-contextual representations for semantic segmentation[J]. arXiv preprint arXiv:1909.11065, 2019.</p>
+<p>朱承璋,邹北骥,向遥,严权峰,梁毅雄,崔锦恺,刘晴.彩色眼底图像视网膜血管分割方法研究进展[J].计算机辅助设计与形学学报,2015,27(11):2046-2057.袁鑫, 郑秀娟, 吉彬, 李淼, 李彬.</p>
+<p>基于多尺度残差卷积神经网络的视杯视盘联合分割. 生物医学工程学杂志, 2020, 37(5): 875-884. doi: 10.7507/1001-5515.201909006 王思懋.</p>
+<p>深度学习在眼底图像分析中的研究与应用[D].哈尔滨工业大学,2020.</p>
 
     </div>
     <div class="article-footer">
