@@ -39,7 +39,7 @@
 <meta itemprop="description" content="全自动的彩色眼底图像分割是自动化的眼底疾病筛查系统和辅助诊断系统的基础，能大大改善传统眼底疾病筛查和诊断的流程，降低眼科医生的阅片的工作量，">
 <meta itemprop="datePublished" content="2021-03-03T16:03:59+08:00" />
 <meta itemprop="dateModified" content="2021-03-03T16:03:59+08:00" />
-<meta itemprop="wordCount" content="12032">
+<meta itemprop="wordCount" content="12091">
 
 
 
@@ -293,7 +293,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 12032字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 12091字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 25分 </span>
       </div>
     </div>
@@ -346,8 +346,10 @@ architectures, loss functions, etc.</p>
 <p>语义分割是对一张图像进行像素级的分类。由于语义分割问题被定义为像素级，意味着仅仅是图像的分类是不够的，还需要在原图像上进行以像素级的分辨率进行定位。
 更加正式的明确语义分割任务如下：</p>
 <p>输入：
-$^{\mathop {\rm{R}}\nolimits^{H<em>W</em>3} }$，常规的图片，其中H和W分别代表输入图片的高和宽。</p>
-<p>输出： $^{\mathop {\rm{R}}\nolimits^{H<em>W</em>classNum} }$，
+$\mathop {\rm{R}}\nolimits^{H<em>W</em>3}$，</p>
+<p>常规的图片，其中H和W分别代表输入图片的高和宽。</p>
+<p>输出：</p>
+<p>$\mathop {\rm{R}}\nolimits^{H<em>W</em>classNum}$，
 classNum为给定的数据集的类别数，也就是一共classNum个通道的H*W大小的特征图。每一个通道对应一个class,对每一个像素位置，都有classNum个通道,每个通道的值对应那个像素属于该class的预测概率。</p>
 <h3 id="卷积神经网络">卷积神经网络</h3>
 <p>卷积神经网络（Convolutional Neural Network）主要由三部分组成：</p>
@@ -367,19 +369,10 @@ CNN的主要计算优势在于，同层的卷积核相同，
 LSTM体系结构包括三个门（输入门，输出门，遗忘门），
 通过门控状态来控制传输状态，记住需要长时间记忆的，忘记不重要的信息。</p>
 <p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig2.png" alt="RNN">{width=&quot;\linewidth&quot;}</p>
-<p><img src="fig3.png" alt="LSTM">{width=&ldquo;0.5\linewidth&rdquo;}</p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig3.png" alt="LSTM">{width=&ldquo;0.5\linewidth&rdquo;}</p>
 <h3 id="编码器-解码器和自编码器模型">编码器-解码器和自编码器模型</h3>
 <p>由编码函数编码器-解码器模型是一组模型，可以学习通过两级网络将数据从输入域映射到输出域：由编码函数
-$z = f(x)$ 表示的编码器将输入压缩为潜在空间表示；解码器 $y = g(z)$
-旨在预测潜在空间表示的输出。这里的潜在表示本质上是指特征（矢量）表示，它能够捕获底层的输入的语义信息，可用于预测输出。这些模型在图像到图像的翻译问题以及NLP中的序列模型中非常流行。
-重建损失用于测量ground-truth $y$
-和后续重建$\hat{y}$之间的差异。通常通过最小化重建损失
-$L(y, \hat{y})$来训练这些模型。此处的输出可以是图像的增强版本（例如，在图像去模糊或超分辨率中）。
-自编码器是编码器-解码器模型的特例，其中输入和输出相同。
-最受欢迎的一种是堆叠式降噪自编码器（SDAE），它可以堆叠多个自编码器并将其用于图像降噪。
-另一个流行的变体是变体自编码器（VAE），它在潜在表示上施加了先验分布。
-VAE能够根据给定的数据分布生成实际样本。
-对抗性自动编码器是另一种变体，它在潜在表示上引入对抗性损失，以使它们近似先验分布。</p>
+$z = f(x)$ 表示的编码器将输入压缩为潜在空间表示；解码器 $y = g(z)$旨在预测潜在空间表示的输出。这里的潜在表示本质上是指特征（矢量）表示，它能够捕获底层的输入的语义信息，可用于预测输出。这些模型在图像到图像的翻译问题以及NLP中的序列模型中非常流行。重建损失用于测量ground-truth $y$和后续重建$\hat{y}$之间的差异。通常通过最小化重建损失$L(y, \hat{y})$来训练这些模型。此处的输出可以是图像的增强版本（例如，在图像去模糊或超分辨率中）。自编码器是编码器-解码器模型的特例，其中输入和输出相同。最受欢迎的一种是堆叠式降噪自编码器（SDAE），它可以堆叠多个自编码器并将其用于图像降噪。另一个流行的变体是变体自编码器（VAE），它在潜在表示上施加了先验分布。VAE能够根据给定的数据分布生成实际样本。对抗性自动编码器是另一种变体，它在潜在表示上引入对抗性损失，以使它们近似先验分布。</p>
 <p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig4.png" alt="编码器-解码器结构">{width=&quot;\linewidth&quot;}</p>
 <h3 id="transformer">Transformer</h3>
 <p>Transformer有一个编码器-解码器结构。编码器由六个相同的层组成，每层有两个子层:一个多头自注意力模块和一个简单的全连接前馈网络。如图所示，在每一层之后，使用残差连接和层标准化。注意，不同于同时执行特征聚集和特征变换的常规卷积网络(例如，卷积层之后是非线性)，这两个步骤在Transformer模型中是解耦的，即自注意力层仅执行聚集，而前馈层执行变换。与编码器类似，Transformer模型中的解码器包含六个相同的层。每个解码器层有三个子层，前两个子层(多头自注意力和前馈)类似于编码器，而第三子层对相应编码器层的输出执行多头注意力。</p>
