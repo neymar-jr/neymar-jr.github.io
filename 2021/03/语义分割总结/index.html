@@ -39,7 +39,7 @@
 <meta itemprop="description" content="全自动的彩色眼底图像分割是自动化的眼底疾病筛查系统和辅助诊断系统的基础，能大大改善传统眼底疾病筛查和诊断的流程，降低眼科医生的阅片的工作量，">
 <meta itemprop="datePublished" content="2021-03-03T16:03:59+08:00" />
 <meta itemprop="dateModified" content="2021-03-03T16:03:59+08:00" />
-<meta itemprop="wordCount" content="12049">
+<meta itemprop="wordCount" content="12050">
 
 
 
@@ -293,42 +293,21 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 12049字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 12050字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 25分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <p>全自动的彩色眼底图像分割是自动化的眼底疾病筛查系统和辅助诊断系统的基础，能大大改善传统眼底疾病筛查和诊断的流程，降低眼科医生的阅片的工作量，优化医疗资源的配置。
-眼底图像中常见的结构包括血管、视盘和视杯，对于眼疾患者，可能还存在病灶，如渗出、微动脉瘤等。结构的形态变化以及病灶的有无、病灶的面积和数量等是眼疾诊断的重要临床依据。</p>
-<p>眼底图像分割方法是语义分割方法在分析眼底图像中的具体应用。语义分割可以表述为带有语义标签的像素分类问题，其对图像所有像素使用一组对象类别（如人、车、树、天空）进行像素级标记，
-因此通常比预测整个图像隶属单个标签的图像分类困难。本文总结了现有的基于深度学习的语义分割方法，介绍常用数据集，网络架构，损失函数等。</p>
-<p>Fully automatic color fundus image segmentation is the basis of the
-automated fundus disease screening system and auxiliary diagnosis
-system, which can greatly improve the traditional fundus disease
-screening and diagnosis process, reduce the workload of
-ophthalmologists, and optimize the allocation of medical resources .
-Common structures in fundus images include blood vessels, optic discs,
-and optic cups. For patients with eye diseases, there may be lesions
-such as exudation and microaneurysms. The morphological changes of the
-structure, the presence or absence of lesions, the area and number of
-lesions, etc. are important clinical evidence for the diagnosis of eye
-diseases.</p>
-<p>Fundus image segmentation method is the specific application of semantic
-segmentation method in analyzing fundus image. Semantic segmentation can
-be expressed as a pixel classification problem with semantic labels,
-which uses a set of object categories (such as people, cars, trees, and
-sky) to mark all pixels of the image at the pixel level. Therefore, it
-is usually more difficult than predicting that the entire image belongs
-to a single label. This article summarizes the existing semantic
-segmentation methods, introduces commonly used data sets, network
-architectures, loss functions, etc.</p>
+      <p>全自动的彩色眼底图像分割是自动化的眼底疾病筛查系统和辅助诊断系统的基础，能大大改善传统眼底疾病筛查和诊断的流程，降低眼科医生的阅片的工作量，优化医疗资源的配置。眼底图像中常见的结构包括血管、视盘和视杯，对于眼疾患者，可能还存在病灶，如渗出、微动脉瘤等。结构的形态变化以及病灶的有无、病灶的面积和数量等是眼疾诊断的重要临床依据。</p>
+<p>眼底图像分割方法是语义分割方法在分析眼底图像中的具体应用。语义分割可以表述为带有语义标签的像素分类问题，其对图像所有像素使用一组对象类别（如人、车、树、天空）进行像素级标记，因此通常比预测整个图像隶属单个标签的图像分类困难。本文总结了现有的基于深度学习的语义分割方法，介绍常用数据集，网络架构，损失函数等。</p>
+<p>Fully automatic color fundus image segmentation is the basis of the automated fundus disease screening system and auxiliary diagnosis system, which can greatly improve the traditional fundus disease
+screening and diagnosis process, reduce the workload of ophthalmologists, and optimize the allocation of medical resources . Common structures in fundus images include blood vessels, optic discs, and optic cups. For patients with eye diseases, there may be lesions such as exudation and microaneurysms. The morphological changes of the structure, the presence or absence of lesions, the area and number of lesions, etc. are important clinical evidence for the diagnosis of eye diseases.</p>
+<p>Fundus image segmentation method is the specific application of semantic segmentation method in analyzing fundus image. Semantic segmentation can be expressed as a pixel classification problem with semantic labels, which uses a set of object categories (such as people, cars, trees, and sky) to mark all pixels of the image at the pixel level. Therefore, it is usually more difficult than predicting that the entire image belongs to a single label. This article summarizes the existing semantic segmentation methods, introduces commonly used data sets, network architectures, loss functions, etc.</p>
 <h1 id="绪论">绪论</h1>
 <h2 id="研究背景与意义">研究背景与意义</h2>
 <p>视网膜血管网络是唯一可以在体内可视化和拍照的血管系统。视网膜血管成像能够为患有特定心血管疾病和眼科疾病的患者提供临床预后信息.
 当前，视网膜血管分割高度依赖于经验丰富的眼科医生的手工工作，这是繁琐，耗时且可再现性低的。因此，迫切需要一种全自动且准确的视网膜血管分割方法，以减少眼科医生的工作量，并提供客观，精确的视网膜血管异常测量。有几个因素使这项任务具有挑战性。血管的长度和口径因对象而异。血管，血管边界，视盘和中央凹等各种病变的存在（包括出血，渗出液，微动脉瘤和纤维化带）可与血管混淆。此外，血管的相对低的对比度和一些眼底图像的低质量进一步增加了分割难度。视网膜是人类眼球后部的所谓眼底。眼底图像中有许多小血管，唯一可以无创地直接观察到的是人体深部血管。与年龄相关的黄斑变性，还有其他一些眼部疾病也与高血压，动脉粥样硬化和糖尿病等疾病密切相关。分割血管并从眼底图像中提取血管特征，使得医生可以快速诊断和确定病情并提高诊断效率，这是非常重要的。</p>
-<p>青光眼是目前发病率率最高的视神经疾病之一，截至目前，全世界的青光眼患者的人数已经达到七千万以上。青光眼是由眼内压升高而引起的视神经纤维损伤所致，这是一种不可逆的损伤，没有自愈的可能。并且青光眼术后失明率也是非常之高。青光眼早期是没有明显的症状的，但随着疾病的进展，患者会逐渐失去视力。等到出现视力不佳且难以识别的患者去医院就诊，往往已进入青光眼末期，此时视神经纤维很可能已经严重受损且难以康复。中国是世界上青光眼患者最多的国家，所以研究开发一种可以自动诊断识别青光眼的医疗系统迫在眉睫。杯盘比指的是视杯直径与视盘直径之比。通常来说，正常眼底的杯盘比值为
-0.3 至 0.5。如果杯盘比值超过了
-0.5，则怀疑患者有可能是青光眼。所以使用人工智能算法实现自动进行视杯视盘分割具有重要意义。</p>
+<p>青光眼是目前发病率率最高的视神经疾病之一，截至目前，全世界的青光眼患者的人数已经达到七千万以上。青光眼是由眼内压升高而引起的视神经纤维损伤所致，这是一种不可逆的损伤，没有自愈的可能。并且青光眼术后失明率也是非常之高。青光眼早期是没有明显的症状的，但随着疾病的进展，患者会逐渐失去视力。等到出现视力不佳且难以识别的患者去医院就诊，往往已进入青光眼末期，此时视神经纤维很可能已经严重受损且难以康复。中国是世界上青光眼患者最多的国家，所以研究开发一种可以自动诊断识别青光眼的医疗系统迫在眉睫。杯盘比指的是视杯直径与视盘直径之比。通常来说，正常眼底的杯盘比值为0.3 至 0.5。如果杯盘比值超过了0.5，则怀疑患者有可能是青光眼。所以使用人工智能算法实现自动进行视杯视盘分割具有重要意义。</p>
 <h2 id="语义分割方法总结">语义分割方法总结</h2>
 <p>学术界已经有了很多成熟的图像分割方法，从最早的直方图阈值化方法，特征空间聚类方法，区域增长方法和SVM及随机森林等机器学习方法等，到近年卷积神经网络的兴起，衍生出了大量创新性的工作，包括全卷积网络，编码器-解码器结构，多尺度提取特征和基于金字塔的方法，递归神经网络，视觉注意力模型，以及生成对抗模型等。</p>
 <h1 id="眼底图像分割方法研究课题分析">眼底图像分割方法研究课题分析</h1>
@@ -349,7 +328,7 @@ architectures, loss functions, etc.</p>
 <p>${\rm{R}}^{H<em>W</em>3}$</p>
 <p>常规的图片，其中H和W分别代表输入图片的高和宽。</p>
 <p>输出：</p>
-<p>$ {\rm{R}}^{H<em>W</em>classNum} $</p>
+<p>$ {\rm{R}}^{H<em>W</em>classNum}$</p>
 <p>classNum为给定的数据集的类别数，也就是一共classNum个通道的H*W大小的特征图。每一个通道对应一 class,对每一个像素位置，都有classNum个通道,每个通道的值对应那个像素属于该class的预测概率。</p>
 <h3 id="卷积神经网络">卷积神经网络</h3>
 <p>卷积神经网络（Convolutional Neural Network）主要由三部分组成：</p>
