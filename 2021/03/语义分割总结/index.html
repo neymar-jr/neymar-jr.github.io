@@ -426,8 +426,8 @@ U-Net网络的每个卷积层得到的特征图都会融合到对应的上采样
 <p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig8.png" alt="U-Net"></p>
 <p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig9.png" alt="DeepLabv3+"></p>
 <h3 id="deeplabv1-v2-v3-v3">Deeplab（V1 V2 V3 V3+）</h3>
-<p>DeepLabv1
-是由深度卷积神经网络和概率图模型级联而成的语义分割模型，由于深度卷积神经网络在重复下采样的过程中会丢失很多的细节信息，所以采用扩张卷积算法增加感受野以获得更多上下文信息，增大感受野可间接减少层数。使用全连接条件随机场来提高模型捕获细节的能力。</p>
+<p>DeepLabv1</p>
+<p>是由深度卷积神经网络和概率图模型级联而成的语义分割模型，由于深度卷积神经网络在重复下采样的过程中会丢失很多的细节信息，所以采用扩张卷积算法增加感受野以获得更多上下文信息，增大感受野可间接减少层数。使用全连接条件随机场来提高模型捕获细节的能力。</p>
 <p>DeepLabv2</p>
 <p>增加了 ASPP（Atrous spatial pyramid pooling）结构，利用多个不同采样率的扩张卷积提取特征，再将特征融合以捕获多尺度的上下文信息。</p>
 <p>DeepLabv3</p>
