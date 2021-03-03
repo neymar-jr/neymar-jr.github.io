@@ -544,7 +544,6 @@ C向量进行L2归一化，最后与第一条分支结果结合。</p>
 <p>1.根据网络中间层的特征表示估测一个粗略的语义分割结果作为 OCR方法的一个输入 ，即软物体区域（Soft Object Regions），具体是后接1 x 1卷积调整通道数，得到b x k x h x w的输出。</p>
 <p>2.根据粗略的语义分割结果和网络最深层的特征表示计算出 k组向量，即物体区域表示（Object Region Representations），其中每一个向量对应一个语义类别的特征表示（因为组略的语义分割结果包含了物体区域信息，相当于用每个物体区域的mask和像素特征表示做矩阵乘法），具体是b x c x h x w的Pixel Representations和 b x k x h x w 的转置做矩阵乘法得到b x k x c输出即Object Region Representations。</p>
 <p>3.计算网络最深层输出的像素特征表示PR（Pixel Representations）与计算得到的物体区域特征表示ORR（Object Region Representation）之间的关系矩阵，然后根据每个像素和物体区域特征表示在关系矩阵中的数值把物体区域特征加权求和，得到最后的物体上下文特征表示 OCR (Object Contextual Representation) 。具体是b x k x c的ORR和b x c x h x w的PR做矩阵乘法得到b x k x h x w的输出，再在维度k加上Softmax函数转化为attention map同时也是解码器即PRR（Pixel-Region Relation），再对PRR和ORR做矩阵乘法得到b x c x h x w的OCR。当把物体上下文特征表示 OCR 与网络最深层输入的特征表示拼接之后作为上下文信息增强的特征表示（Augmented Representation），可以基于增强后的特征表示预测每个像素的语义类别。综上，OCR可计算一组物体区域的特征表达用于表示每一类物体的区域特征，然后根据物体区域特征表示与像素特征表示之间的相关性，得到结合物体区域特征的像素特征表示。</p>
-<hr>
 <h1 id="参考文献">参考文献</h1>
 <p>Liu Q, Zou B, Zhao Y, et al. A Deep Gradient Boosting Network for Optic
 Disc and Cup Segmentation[C]//ICASSP 2020-2020 IEEE International
