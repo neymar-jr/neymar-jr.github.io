@@ -78,4 +78,16 @@
     <priority>0.5</priority>
   </url>
   
+  <url>
+    <loc>https://neymar-jr.github.io/author/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://neymar-jr.github.io/en/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
 </urlset>
