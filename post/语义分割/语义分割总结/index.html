@@ -90,6 +90,8 @@
 
 
 
+
+
 </head>
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
@@ -438,10 +440,10 @@ screening and diagnosis process, reduce the workload of ophthalmologists, and op
 <p>语义分割是对一张图像进行像素级的分类。由于语义分割问题被定义为像素级，意味着仅仅是图像的分类是不够的，还需要在原图像上进行以像素级的分辨率进行定位。
 更加正式的明确语义分割任务如下：</p>
 <p>输入：</p>
-<p>$$R^{H \times W \times 3}$$</p>
+<p>$R^{H \times W \times 3}$</p>
 <p>常规的图片，其中H和W分别代表输入图片的高和宽。</p>
 <p>输出：</p>
-<p>$$R^{H \times W \times classNum}$$</p>
+<p>$R^{H \times W \times classNum}$</p>
 <p>classNum为给定的数据集的类别数，也就是一共classNum个通道的H*W大小的特征图。每一个通道对应一 class,对每一个像素位置，都有classNum个通道,每个通道的值对应那个像素属于该class的预测概率。</p>
 <h3 id="卷积神经网络">卷积神经网络</h3>
 <p>卷积神经网络（Convolutional Neural Network）主要由三部分组成：</p>
@@ -877,16 +879,33 @@ on Computer Vision (ECCV). 2018: 267-283. Fu J, Liu J, Tian H, et al.</p>
 
 
 
-  <script type="text/javascript">
-    window.MathJax = {
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
+
+
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css"
+    integrity="sha384-BdGj8xC2eZkQaxoQ8nSLefg4AV4/AwB3Fj+8SUSo7pnKP6Eoy18liIKTPn9oBYNG"
+    crossorigin="anonymous">
+
+  
+  <script defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.js"
+    integrity="sha384-JiKN5O8x9Hhs/UE5cT5AAJqieYlOZbGT3CHws/y97o3ty4R7/O5poG9F3JoiOYw1"
+    crossorigin="anonymous"></script>
+
+  
+  <script defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+    crossorigin="anonymous" onload="renderMathInElement(document.body);">
   </script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-
-
-
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        
+      });
+    });
+  </script>
 
 
 
