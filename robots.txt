@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://neymar-jr.github.io/sitemap.xml
