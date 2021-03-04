@@ -39,7 +39,7 @@
 <meta itemprop="description" content="全自动的彩色眼底图像分割是自动化的眼底疾病筛查系统和辅助诊断系统的基础，能大大改善传统眼底疾病筛查和诊断的流程，降低眼科医生的阅片的工作量，">
 <meta itemprop="datePublished" content="2021-03-03T16:03:59+08:00" />
 <meta itemprop="dateModified" content="2021-03-03T16:03:59+08:00" />
-<meta itemprop="wordCount" content="12054">
+<meta itemprop="wordCount" content="12043">
 
 
 
@@ -293,7 +293,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 12054字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 12043字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 25分 </span>
       </div>
     </div>
@@ -483,7 +483,7 @@ Net中的${(H * W)^2}$次计算像素点之间的相似性简化成两次迭代�
 <p>3.引入注意力机制，即计算亲和系数矩阵。</p>
 <p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig24.png" alt="SENet"></p>
 <h3 id="senet">SENet</h3>
-<p>$Ftr$是传统的卷积结构，X和U是Ftr的输入$(C&rsquo;xH&rsquo;xW')$和输出$(CxHxW)$，SENet增加的部分是U后的结构，即对U先做全局平均池化，输出1*1*C的向量后接两个全连接层，最后加Sigmoid函数将范围限制在0，1之间，把这个值作为放缩系数与对应通道相乘。</p>
+<p>$Ftr$是传统的卷积结构，X和U是$Ftr$的输入$(C' \cdot H' \cdot W')$和输出$(C \cdot H \cdot W)$，SENet增加的部分是U后的结构，即对U先做全局平均池化，输出1*1*C的向量后接两个全连接层，最后加Sigmoid函数将范围限制在0，1之间，把这个值作为放缩系数与对应通道相乘。</p>
 <p>总结:</p>
 <p>增加了有Squeeze压缩和Extraction解压两部分的分支用于得到放缩系数，把重要的通道增强，不重要的通道减弱，以实现注意力机制。</p>
 <h3 id="gcnet">GCNet</h3>
@@ -504,8 +504,7 @@ Net中的${(H * W)^2}$次计算像素点之间的相似性简化成两次迭代�
 <h3 id="dmnet">DMNet</h3>
 <p>DCM模块具体如下：</p>
 <p>第一个分支执行1 x 1卷积调整通道数为512，得到降维后特征图。</p>
-<p>第二个分支先执行自适应池化将原图调整为k x k大小，后接1 x
-1卷积调整通道数512，得到降维后卷积核，与降维后特征图进行卷积。</p>
+<p>第二个分支先执行自适应池化将原图调整为k x k大小，后接1 x 1卷积调整通道数512，得到降维后卷积核，与降维后特征图进行卷积。</p>
 <p>总结：特点是Context-aware filters使类似PSPNet的金字塔池化，将图片划分k x k个区域，使用多个k值不同的DCM模块即可达到多尺度信息融合，后接1 x 1卷积结果不做常规的特征图，而是作为卷积核，和上面分支得到的特征图进行卷积操作，个人理解相当于卷积核结合特征图信息进行了有意义的初始化，有利于卷积核参数的训练。</p>
 <p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig28.png" alt="DMNet"></p>
 <p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig29.png" alt="ParseNet"></p>
