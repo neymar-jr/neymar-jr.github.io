@@ -51,13 +51,6 @@
   </url>
   
   <url>
-    <loc>https://neymar-jr.github.io/about/</loc>
-    <lastmod>2021-02-10T02:07:08+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://neymar-jr.github.io/tags/%E6%96%B0%E5%B9%B4/</loc>
     <lastmod>2021-02-10T00:36:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -74,6 +67,13 @@
   <url>
     <loc>https://neymar-jr.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2021-02-10T00:36:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://neymar-jr.github.io/about/</loc>
+    <lastmod>2021-03-04T14:00:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
