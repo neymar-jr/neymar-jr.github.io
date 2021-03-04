@@ -451,19 +451,19 @@ screening and diagnosis process, reduce the workload of ophthalmologists, and op
 每个单元都从前一层中较小的邻域（称为感受野）接收加权输入。通过堆叠层数以形成多分辨率金字塔，
 高层可以从越来越宽的感受野中学习特征。</p>
 <p>CNN的主要计算优势在于，同层的卷积核相同，共享权重，因此与完全连接的神经网络相比，参数数量明显减少。一些最著名的CNN架构包括：AlexNet，VGGNet，ResNet，GoogLeNet和MobileNet。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig1.png" alt="CNN"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig1.png" alt="CNN"></p>
 <h3 id="rnn和lstm">RNN和LSTM</h3>
 <p>RNN被广泛用于处理顺序数据，例如语音，文本，视频和时间序列，其中任何给定时间或位置的数据都取决于先前遇到的数据。在每个时间戳上，模型都会收集当前时间$\mathop X\nolimits_i$的输入和上一步$\mathop h\nolimits_{i - 1}$的隐藏状态，
 并输出目标值和新的隐藏状态。RNN通常在长序列方面存在问题，因为在许多实际应用中它们无法捕获长期依赖关系（尽管它们在这方面没有任何理论上的限制），并且经常遭受梯度消失或爆炸问题的困扰。长短时记忆网络旨在避免这些问题。LSTM体系结构包括三个门（输入门，输出门，遗忘门），通过门控状态来控制传输状态，记住需要长时间记忆的，忘记不重要的信息。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig2.png" alt="RNN"></p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig3.png" alt="LSTM"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig2.png" alt="RNN"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig3.png" alt="LSTM"></p>
 <h3 id="编码器-解码器和自编码器模型">编码器-解码器和自编码器模型</h3>
 <p>由编码函数编码器-解码器模型是一组模型，可以学习通过两级网络将数据从输入域映射到输出域：由编码函数
 $z = f(x)$ 表示的编码器将输入压缩为潜在空间表示；解码器 $y = g(z)$旨在预测潜在空间表示的输出。这里的潜在表示本质上是指特征（矢量）表示，它能够捕获底层的输入的语义信息，可用于预测输出。这些模型在图像到图像的翻译问题以及NLP中的序列模型中非常流行。重建损失用于测量ground-truth $y$和后续重建$\hat{y}$之间的差异。通常通过最小化重建损失$L(y, \hat{y})$来训练这些模型。此处的输出可以是图像的增强版本（例如，在图像去模糊或超分辨率中）。自编码器是编码器-解码器模型的特例，其中输入和输出相同。最受欢迎的一种是堆叠式降噪自编码器（SDAE），它可以堆叠多个自编码器并将其用于图像降噪。另一个流行的变体是变体自编码器（VAE），它在潜在表示上施加了先验分布。VAE能够根据给定的数据分布生成实际样本。对抗性自动编码器是另一种变体，它在潜在表示上引入对抗性损失，以使它们近似先验分布。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig4.png" alt="编码器-解码器结构"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig4.png" alt="编码器-解码器结构"></p>
 <h3 id="transformer">Transformer</h3>
 <p>Transformer有一个编码器-解码器结构。编码器由六个相同的层组成，每层有两个子层:一个多头自注意力模块和一个简单的全连接前馈网络。如图所示，在每一层之后，使用残差连接和层标准化。注意，不同于同时执行特征聚集和特征变换的常规卷积网络(例如，卷积层之后是非线性)，这两个步骤在Transformer模型中是解耦的，即自注意力层仅执行聚集，而前馈层执行变换。与编码器类似，Transformer模型中的解码器包含六个相同的层。每个解码器层有三个子层，前两个子层(多头自注意力和前馈)类似于编码器，而第三子层对相应编码器层的输出执行多头注意力。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig5.png" alt="Transformer"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig5.png" alt="Transformer"></p>
 <h3 id="迁移学习">迁移学习</h3>
 <p>在某些情况下，可以在新的数据集上从头开始训练深度学习模型（假设有足够数量的已标记训练数据），但是在许多情况下，没有足够的已标记数据来从头开始训练模型，可以使用迁移学习解决这个问题。在迁移学习中，经过对新任务的适应，将在一个任务上训练的模型重新用于另一相关任务。例如，可以使在ImageNet上训练的图像分类模型适应不同的任务，例如纹理分类或面部识别。在语义分割的情况下，许多人使用在ImageNet上训练的模型（比大多数图像分割数据集更大的数据集）作为网络的编码器部分，并从这些初始权重中重新训练他们的模型。预训练的模型应该能够捕获分割所需图像的语义信息，因此能够用较少已标记样本来训练模型。</p>
 <h2 id="数据集">数据集</h2>
@@ -507,16 +507,16 @@ $$Dice = \frac{{2|A \cap B|}}{{|A| + |B|}}$$</p>
 <p>通常CNN网络在卷积池化之后会接上若干个全连接层，将产生的特征图映射成为一个固定长度的特征向量。一般的CNN结构适用于图像级别的分类和回归任务，因为它们最后都期望得到输入图像属于各个类别的概率。FCN对图像进行像素级的分类，从而解决了语义级别的细粒度图像分割问题。与经典的CNN在卷积层后加全连接层得到固定长度的特征向量进行分类不同，FCN可以接受任意尺寸的输入图像，采用反卷积对最后的特征图进行上采样，使它恢复到输入图像相同的尺寸，从而可以对每一个像素都产生一个预测。全卷积网络从抽象的特征中恢复出每个像素所属的类别。即从图像级别的分类进一步延伸到像素级别的分类。</p>
 <p>2.跳层连接</p>
 <p>语义分割任务包括语义识别和目标定位两个方面。通常经过CNN多次卷积池化后得到的高层特征图可以反映抽象语义信息，低级特征图可以精确反映位置信息。权衡二者，使用跳层连接，将低层位置信息丰富的特征图和高层和高层语义信息丰富的特征图融合，提高语义分割性能。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig6.png" alt="FCN"></p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig7.png" alt="FCN"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig6.png" alt="FCN"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig7.png" alt="FCN"></p>
 <h3 id="u-net">U-Net</h3>
 <p>U-Net网络常用于医学图像分割。</p>
 <p>1.
 U型对称结构。左侧为收缩路径即编码器，经过多次卷积池化缩小特征图，以提取高级语义特征，右侧是扩张路径即解码器，经过多次转置卷积扩大特征图，以将特征图解码还原成原图大小进行像素级分类。</p>
 <p>2.
 U-Net网络的每个卷积层得到的特征图都会融合到对应的上采样层，从而实现每层特征图都有效使用到后续计算中，即跳层连接。U-Net结合了低级特征图和高级特征图，提高模型的结果精确度。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig8.png" alt="U-Net"></p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig9.png" alt="DeepLabv3+"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig8.png" alt="U-Net"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig9.png" alt="DeepLabv3+"></p>
 <h3 id="deeplabv1-v2-v3-v3">Deeplab（V1 V2 V3 V3+）</h3>
 <p>DeepLabv1</p>
 <p>是由深度卷积神经网络和概率图模型级联而成的语义分割模型，由于深度卷积神经网络在重复下采样的过程中会丢失很多的细节信息，所以采用扩张卷积算法增加感受野以获得更多上下文信息，增大感受野可间接减少层数。使用全连接条件随机场来提高模型捕获细节的能力。</p>
@@ -526,8 +526,8 @@ U-Net网络的每个卷积层得到的特征图都会融合到对应的上采样
 <p>在 ASPP中加入了全局平均池化，同时在扩张卷积后添加批量归一化，有效地捕获了全局语境信息。</p>
 <p>DeepLabv3+</p>
 <p>在 DeepLabv3 的基础上增加了编-解码模块和 Xception主干网络，增加编解码模块主要是为了恢复原始的像素信息，使得分割的细节信息能够更好的保留，同时编码丰富的上下文信息。增加Xception主干网络是为了采用深度卷积进一步提高算法的精度和速度。在inception结构中，先对输入进行1*1的卷积，之后将通道分组，分别使用不同的3*3卷积提取特征，最后将各组结果串联在一起作为输出。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig10.png" alt="RefineNet"></p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig11.png" alt="RefineNet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig10.png" alt="RefineNet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig11.png" alt="RefineNet"></p>
 <h3 id="refinenet">RefineNet</h3>
 <p>RefineNet可以分为两部分，分别对应于U-Net中收缩（下采样提取语义特征）和扩张（上采样恢复细节信息）两段路径。收缩路径使用ResNet。扩张路径使用RefineNet，其得到的特征与ResNet中低级特征的融合。</p>
 <p>RefineNet可以分为三个主要部分：</p>
@@ -537,17 +537,17 @@ U-Net网络的每个卷积层得到的特征图都会融合到对应的上采样
 <h3 id="pspnet">PSPNet</h3>
 <p>1.全局平均池化，替代全连接层，减少参数同时增加了先验知识以达到正则化的效果。</p>
 <p>2.金字塔池化，生成的不同尺度的特征图最终被上采样恢复原图大小拼接起来，然后进行卷积调整通道数，进行Softmax分类。金字塔池化模块能收集不同尺度的语境信息并融合，会比全局池化所得的全局信息保留更多细节。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig12.png" alt="PSPNet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig12.png" alt="PSPNet"></p>
 <h3 id="gcn">GCN</h3>
 <p>GCN全局卷积网络从两个设计原则出发：</p>
 <p>1. 定位角度，使用全卷积结构，保留更多位置信息。</p>
 <p>2. 分类角度，使用大尺寸卷积核，以达到在输入尺寸改变时保持感受野足够大。</p>
 <p>GCN模块，卷积核的大小和各个尺度的特征图大小相同以提取全局信息，为了减少参数数量用，k x 1和1 x k两次卷积代替一次k x k卷积，1 x k 和 k x 1两次卷积代替一次1 x 1卷积，并且没有非线性操作。</p>
 <p>BR模块，使用残差结构细化边界。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig13.png" alt="GCN"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig13.png" alt="GCN"></p>
 <p>整体网络架构：</p>
 <p>使用预训练的ResNet作为特征提取网络，FCN4作为分割框架，从特征提取网络的不同阶段提取多尺度的特征图，后接GCN模块用于生成每个类的多尺度语义分数图，BR模块用于细化边界。使用转置卷积对分辨率较低的分数图进行上采样，然后与分辨率较高的分数图相加，以生成新的分数图，在最后一次上采样后，生成语义分数图，用于输出预测结果。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig14.png" alt="EncNet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig14.png" alt="EncNet"></p>
 <h3 id="encnet">EncNet</h3>
 <p>之前引入全局上下文信息的方法大致有两个，扩张卷积和金字塔结构，但这两种方法都一定程度上割裂了单个像素和整个图像的关系。如果能够先捕获图像上下文信息(例如这是卧室)，然后，就可以根据背景语义缩小分类范围
 (例如卧室里面有床、椅子等)，以动态的减少搜索范围。或者说，加入对于场景的先验知识，这样对图片中像素分类更有针对性。</p>
@@ -556,34 +556,34 @@ U-Net网络的每个卷积层得到的特征图都会融合到对应的上采样
 <h3 id="nonlocal-net">NonLocal Net</h3>
 <p>扩大感受野利用全局信息对语义分割很有帮助，全连接完整利用了全局信息，但是增加了大量参数，难以训练，卷积操作利用空间不变性减少了参数数量，但是只能利用局部信息，NonLocal
 Net利用注意力机制，每次计算都使用全部像素，同时计算相似度函数对其加权。这样既利用了全局信息又使网络容易训练。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig15.png" alt="NonLocal Net"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig15.png" alt="NonLocal Net"></p>
 <p>$$\mathop y\nolimits_i  = \frac{1}{{C(x)}}\sum\limits_{\forall j} {f(\mathop x\nolimits_i ,\mathop x\nolimits_j )g(\mathop x\nolimits_j )}$$</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig16.png" alt="NonLocal Net"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig16.png" alt="NonLocal Net"></p>
 <h3 id="psanet">PSANet</h3>
 <p>和NonLocal Net思想相同，主要区别如下：</p>
 <p>1.有两个分支学习双向关系，分别起到collect和distribute的作用。</p>
 <p>2.相关度矩阵$f$的计算。对于像素$i$，其相关度向量$f({x_i},x)$，通过施加在${x_i}$上的两个1 x 1卷积得到，即由$f({x_i},x)$ 变为$f({x_i})$，只和query和相对位置相关。</p>
 <p>此外，PSANet包含两路attention，相当于Transformer中的两个head。两路分别起到collect和distribute的作用。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig17.png" alt="PSANet"></p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig20.png" alt="DANet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig17.png" alt="PSANet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig20.png" alt="DANet"></p>
 <h3 id="danet">DANet</h3>
 <p>和NonLocal Net思想相同，主要区别如下：</p>
 <p>1. 使用双分支，分别是位置注意力机制和通道注意力机制方法。</p>
 <p>2. 使用残差机制。</p>
 <p>具体结构和Transformer相同。B，C，D矩阵分别对应Transformer中的Q，K，V。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig18.png" alt="DANet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig18.png" alt="DANet"></p>
 <p>$${s_{ji}} = \frac{{\exp ({B_i} \cdot {C_j})}}{{\sum\nolimits_{i = 1}^N {\exp ({B_i} \cdot {C_j})} }}$$</p>
 <p>$${E_j} = \alpha \sum\limits_{i = 1}^N {({s_{ji}}{D_i}) + {A_j}}$$</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig19.png" alt="DANet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig19.png" alt="DANet"></p>
 <p>$${x_{ji}} = \frac{{\exp ({A_i} \cdot {A_j})}}{{\sum\nolimits_{i = 1}^C {\exp ({A_i} \cdot {A_j})} }}$$</p>
 <p>$${E_j} = \beta \sum\limits_{i = 1}^C {({x_{ji}}{A_i}) + {A_j}}$$</p>
 <h3 id="ccnet">CCNet</h3>
 <p>和NonLocal Net思想相同，主要区别如下：</p>
 <p>将NonLocal
 Net中的${(H * W)^2}$次计算像素点之间的相似性简化成两次迭代计算当前像素点和同行同列的像素点之间的相似性，共${(H * W) *(H + W - 1)}$次计算，提升了计算效率。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig21.png" alt="CCNet"></p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig22.png" alt="CCNet">{width=&ldquo;0.5\linewidth&rdquo;}</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig23.png" alt="APCNet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig21.png" alt="CCNet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig22.png" alt="CCNet">{width=&ldquo;0.5\linewidth&rdquo;}</p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig23.png" alt="APCNet"></p>
 <h3 id="apcnet">APCNet</h3>
 <p>整体流程描述如下：</p>
 <p>原始图片先经过CNN得到特征图，后接多个提取不同尺度特征ACM模块和原特征图结合组成最终特征图，后接卷积调整通道数量，最后预测结果。</p>
@@ -595,7 +595,7 @@ Net中的${(H * W)^2}$次计算像素点之间的相似性简化成两次迭代�
 <p>1.利用了多尺度信息，即使用多个s值不同的ACM模块最后整合。</p>
 <p>2.计算亲和系数矩阵前，每个像素整合了全局信息，所以使得到的亲和系数矩阵既有单个像素信息也有全局像素信息，以达到表示单个像素和全局像素相关性的效果。</p>
 <p>3.引入注意力机制，即计算亲和系数矩阵。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig24.png" alt="SENet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig24.png" alt="SENet"></p>
 <h3 id="senet">SENet</h3>
 <p>$Ftr$是传统的卷积结构，X和U是$Ftr$的输入$(C' \cdot H' \cdot W')$和输出$(C \cdot H \cdot W)$，SENet增加的部分是U后的结构，即对U先做全局平均池化，输出1*1*C的向量后接两个全连接层，最后加Sigmoid函数将范围限制在0，1之间，把这个值作为放缩系数与对应通道相乘。</p>
 <p>总结:</p>
@@ -605,30 +605,30 @@ Net中的${(H * W)^2}$次计算像素点之间的相似性简化成两次迭代�
 <p>NonLocal Net公式如下：</p>
 <p>$${z_i} = {x_i} + {W_z}\sum\limits_{j = 1}^{{N_p}} {\frac{{f({x_i},{x_j})}}{{C(x)}}} ({W_v} \cdot {x_j})$$</p>
 <p>对其中的attention map $\frac{{f({x_i},{x_j})}}{{C(x)}}$ 可视化如下：</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig25.png" alt="GCNet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig25.png" alt="GCNet"></p>
 <p>作者发现训练好的NonLocal Net中，对于图像中不同位置计算的attention map几乎一致。所以，作者对NonLocal Net进行了简化，通过计算一个全局的attention map来简化non-local block，并且对所有位置共享这个全局attention map。忽略 ${W_z}$，简化版的non-local block定义为：</p>
 <p>$${z_i} = {x_i} + \sum\limits_{j = 1}^{{N_p}} {\frac{{\exp ({W_k}{x_j})}}{{\sum\nolimits_{m = 1}^{{N_p}} {\exp ({W_k}{x_m})} }}} ({W_v} \cdot {x_j})$$</p>
 <p>为了进一步z减少简化版non-local block的计算量，将 ${W_v}$ 移到attention pooling的外面，表示为：</p>
 <p>$${z_i} = {x_i} + {W_v}\sum\limits_{j = 1}^{{N_p}} {\frac{{\exp ({W_k}{x_j})}}{{\sum\nolimits_{m = 1}^{{N_p}} {\exp ({W_k}{x_m})} }}} {x_j}$$</p>
 <p>其结构如下：</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig26.png" alt="GCNet">{width=&ldquo;0.3\linewidth&rdquo;}</p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig26.png" alt="GCNet">{width=&ldquo;0.3\linewidth&rdquo;}</p>
 <p>由于Transform结构中有大量参数，为了获得SENet轻量化的特点，1x1卷积用bottleneck transform模块替代，能显著降低参数量，思路即使用C x C/r，C/r x C/r和 C/r x C三次变换替代C x C一次变换，参数数量从C x C缩减为2 x C x C/r + C/r x C/r。因为两层bottleneck transform增加了优化难度，所以在ReLU前面增加一个layer normalization层。</p>
 <p>最后GCNet结构如下：</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig27.png" alt="GCNet">{width=&ldquo;0.3\linewidth&rdquo;}</p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig27.png" alt="GCNet">{width=&ldquo;0.3\linewidth&rdquo;}</p>
 <h3 id="dmnet">DMNet</h3>
 <p>DCM模块具体如下：</p>
 <p>第一个分支执行1 x 1卷积调整通道数为512，得到降维后特征图。</p>
 <p>第二个分支先执行自适应池化将原图调整为k x k大小，后接1 x 1卷积调整通道数512，得到降维后卷积核，与降维后特征图进行卷积。</p>
 <p>总结：特点是Context-aware filters使类似PSPNet的金字塔池化，将图片划分k x k个区域，使用多个k值不同的DCM模块即可达到多尺度信息融合，后接1 x 1卷积结果不做常规的特征图，而是作为卷积核，和上面分支得到的特征图进行卷积操作，个人理解相当于卷积核结合特征图信息进行了有意义的初始化，有利于卷积核参数的训练。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig28.png" alt="DMNet"></p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig29.png" alt="ParseNet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig28.png" alt="DMNet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig29.png" alt="ParseNet"></p>
 <h3 id="parsenet">ParseNet</h3>
 <p>为了整合全局信息，设计两条分支。</p>
 <p>第一条分支先进行全局池化，平均池化或者最大池化，得到1 x 1 x C的特征向量，之后经过L2归一化，后接反池化恢复原特征图尺寸。</p>
 <p>第二条分支对每一个像素位置的1 x 1 x
 C向量进行L2归一化，最后与第一条分支结果结合。</p>
 <p>总结:利用简单的全局平均池化保留每个通道的特征图的全局信息，后接L2归一化。L2归一化的目的是消除量纲大小对特征选择的影响，防止出现在进行特征选择时，偏向数值大的特征，忽视数值小的特征。最后反池化以恢复原特征图尺寸，与经L2归一化的特征图结合得到最终特征。</p>
-<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/posts/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig30.png" alt="OCRNet"></p>
+<p><img src="https://raw.githubusercontent.com/neymar-jr/neymar-jr.github.io.source/master/content/post/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/fig30.png" alt="OCRNet"></p>
 <h3 id="ocrnet">OCRNet</h3>
 <p>主要思想是显式地把像素分类问题转化成物体区域分类问题，这与语义分割问题的原始定义是一致的，即每一个像素的类别就是该像素属于的物体的类别，换言之，与PSPNet 和 DeepLabv3 的上下文信息最主要的不同就在于 OCR方法显式地增强了物体信息。假设backbone输出特征维度是b x c x h x w，共有k个类别。</p>
 <p>OCR 方法的实现主要包括3个阶段：</p>
