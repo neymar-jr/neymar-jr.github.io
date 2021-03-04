@@ -44,10 +44,10 @@ screening and diagnosis process, reduce the workload of ophthalmologists, and op
 &lt;p&gt;语义分割是对一张图像进行像素级的分类。由于语义分割问题被定义为像素级，意味着仅仅是图像的分类是不够的，还需要在原图像上进行以像素级的分辨率进行定位。
 更加正式的明确语义分割任务如下：&lt;/p&gt;
 &lt;p&gt;输入：&lt;/p&gt;
-&lt;p&gt;$R^{H \cdot W \cdot3}$&lt;/p&gt;
+&lt;p&gt;$R^{H \times W \times 3}$&lt;/p&gt;
 &lt;p&gt;常规的图片，其中H和W分别代表输入图片的高和宽。&lt;/p&gt;
 &lt;p&gt;输出：&lt;/p&gt;
-&lt;p&gt;$R^{H \cdot W \cdot classNum}$&lt;/p&gt;
+&lt;p&gt;$R^{H \times W \times classNum}$&lt;/p&gt;
 &lt;p&gt;classNum为给定的数据集的类别数，也就是一共classNum个通道的H*W大小的特征图。每一个通道对应一 class,对每一个像素位置，都有classNum个通道,每个通道的值对应那个像素属于该class的预测概率。&lt;/p&gt;
 &lt;h3 id=&#34;卷积神经网络&#34;&gt;卷积神经网络&lt;/h3&gt;
 &lt;p&gt;卷积神经网络（Convolutional Neural Network）主要由三部分组成：&lt;/p&gt;
