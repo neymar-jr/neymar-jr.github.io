@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
     <head>
 	<meta name="generator" content="Hugo 0.83.1" />
         <meta charset="utf-8">
@@ -11,8 +11,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://neymar-jr.github.io/" /><meta property="og:image" content="https://neymar-jr.github.io"/>
 
-<meta name="application-name" content="uBlogger">
-<meta name="apple-mobile-web-app-title" content="uBlogger"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="求索">
+<meta name="apple-mobile-web-app-title" content="求索"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
@@ -21,7 +21,7 @@
     {
         "@context": "http://schema.org",
         "@type": "WebSite",
-        "url": "https:\/\/neymar-jr.github.io\/","inLanguage": "en","author": {
+        "url": "https:\/\/neymar-jr.github.io\/","inLanguage": "zh-CN","author": {
                 "@type": "Person",
                 "name": "ChrisLiu"
             },"description": "刘宣辰的博客","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","name": "求索"
@@ -37,26 +37,27 @@
         <div class="menu">
             <nav>
                 <ul class="menu-inner"><li>
-                        <a class="menu-item" href="/posts/"> Posts </a>
+                        <a class="menu-item" href="/posts/"> 文章 </a>
                     </li><li>
-                        <a class="menu-item" href="/tags/"> Tags </a>
+                        <a class="menu-item" href="/tags/"> 标签 </a>
                     </li><li>
                         <a class="menu-item" href="/categories/"> Categories </a>
                     </li><li>
                         <a class="menu-item" href="/about/"> About </a>
                     </li></ul>
-            </nav><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+            </nav><span class="menu-item delimiter"></span><span onclick="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/" selected>简体中文</option><option value="/en/">English</option></select>
+                    </span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <span class="svg-icon icon-search"></span>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
                             <span class="svg-icon icon-cancel"></span>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <span class="svg-icon icon-loading"></span>
                         </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <span class="svg-icon icon-moon"></span>
                 </a>
             </div>
@@ -73,11 +74,11 @@
         </div>
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
                             <span class="svg-icon icon-search"></span>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
                             <span class="svg-icon icon-cancel"></span>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
@@ -85,22 +86,23 @@
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        Cancel
+                        取消
                     </a>
                 </div><nav>
                 <ul><li>
-                        <a class="menu-item" href="/posts/" title="">Posts</a>
+                        <a class="menu-item" href="/posts/" title="">文章</a>
                     </li><li>
-                        <a class="menu-item" href="/tags/" title="">Tags</a>
+                        <a class="menu-item" href="/tags/" title="">标签</a>
                     </li><li>
                         <a class="menu-item" href="/categories/" title="">Categories</a>
                     </li><li>
                         <a class="menu-item" href="/about/" title="">About</a>
                     </li></ul>
             </nav>
-            <a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <span class="svg-icon icon-moon"></span>
-            </a></div>
+            </a><span onclick="javascript:void(0);" class="menu-item" title="选择语言">简体中文<select class="language-select" onchange="location = this.value;"><option value="/" selected>简体中文</option><option value="/en/">English</option></select>
+                </span></div>
     </div>
 </header><div class="search-dropdown desktop">
     <div id="search-dropdown-desktop"></div>
@@ -108,47 +110,15 @@
 <div class="search-dropdown mobile">
     <div id="search-dropdown-mobile"></div>
 </div><main class="main">
-                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="Posts"><img loading="lazy" decoding="async"
+                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="文章"><img loading="lazy" decoding="async"
          src="/images/avatar.png"
          alt="/images/avatar.png"
          title="/images/avatar.png"
-    /></a></div><div class="home-meta"><h1 class="home-title">刘宣辰的博客</h1><div class="home-subtitle">路漫漫其修远兮 吾将上下而求索</div><div class="links"><a href="people/chen-chen-71-27-71" rel=" me"></a><a href="https://github.com/neymar-jr" title="GitHub" target="_blank" rel="noopener noreffer me"><span class="svg-social-icon-color icon-github"></span></a><a href="mailto:908815829@qq.com" title="Email" rel=" me"><span class="svg-social-icon-color icon-mail-dot-ru"></span></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><span class="svg-social-icon-color icon-rss"></span></a></div></div>
+    /></a></div><div class="home-meta"><h1 class="home-title">刘宣辰的博客</h1><div class="home-subtitle">路漫漫其修远兮 吾将上下而求索</div><div class="links"><a href="chen-chen-71-27-71" rel=" me"></a><a href="https://github.com/neymar-jr" title="GitHub" target="_blank" rel="noopener noreffer me"><span class="svg-social-icon-color icon-github"></span></a><a href="mailto:908815829@qq.com" title="Email" rel=" me"><span class="svg-social-icon-color icon-mail-dot-ru"></span></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><span class="svg-social-icon-color icon-rss"></span></a></div></div>
 </div>
 
             
-            <article class="summary summary-animation" itemscope itemtype="http://schema.org/Article" style="margin-bottom:0"><div class="featured-image-preview"><div class="post-tags-summary-image"><a class="post-tag-summary" href="/tags/%E6%80%9D%E8%80%83/" style=""><span>思考</span></a></div><a href="/%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94/" target="_blank"><img loading="lazy" decoding="async"
-         src="/%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94/1_hu7180551d55771228bcaaad4c18cd2bcf_2290668_796x238_fill_q90_box_center.jpg"
-         alt="/%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94/1_hu7180551d55771228bcaaad4c18cd2bcf_2290668_796x238_fill_q90_box_center.jpg"
-         title="/%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94/1_hu7180551d55771228bcaaad4c18cd2bcf_2290668_796x238_fill_q90_box_center.jpg" height="798" width="238"
-    /></a>
-        </div><div class="article-text"><h2 class="summary-title" itemprop="name headline">
-            <a href="/%E8%A2%AB%E8%AE%A8%E5%8E%8C%E7%9A%84%E5%8B%87%E6%B0%94/" target="_blank">被讨厌的勇气</a>
-        </h2><div class="post-meta summary-post-meta"><span class="post-author"><a href="https://neymar-jr.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><span class="svg-icon icon-user"></span>ChrisLiu</a></span><span class="post-publish"><i class="svg-icon icon-clock"></i><time class="timeago" datetime="2021-03-21">2021-03-21</time></span><span class="post-category">
-                <a href="/categories/2021%E6%80%9D%E8%80%83/"><i class="svg-icon icon-folder"></i>2021思考</a>
-            </span></div><div class="content summary-content"></div></div>
-</article>
-
-<div class="post-tags-summary-under-footer"><div class="post-tags-summary-under-footer-display" ><a class="post-tag-summary" href="/tags/%E6%80%9D%E8%80%83/" style="">思考</a></div></div>
-
-<article class="summary summary-animation" itemscope itemtype="http://schema.org/Article" style="margin-bottom:0"><div class="article-text"><h2 class="summary-title" itemprop="name headline">
-            <a href="/intj%E5%88%92%E5%88%86/" target="_blank">INTJ划分</a>
-        </h2><div class="post-meta summary-post-meta"><span class="post-author"><a href="https://neymar-jr.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><span class="svg-icon icon-user"></span>ChrisLiu</a></span><span class="post-publish"><i class="svg-icon icon-clock"></i><time class="timeago" datetime="2021-03-21">2021-03-21</time></span><span class="post-category">
-                <a href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6/"><i class="svg-icon icon-folder"></i>心理学</a>
-            </span></div><div class="content summary-content">低阶、中阶、高阶的INTJ分别是怎么样的？ - 沉香的回答 - 知乎 https://www.zhihu.com/question/394452710/answer/1732110212 我认为划分低阶、中阶、高阶intj的标准是与社会的交互方式。 低阶intj int</div></div>
-</article>
-
-<div class="post-tags-summary-under-footer"><div class="post-tags-summary-under-footer-display" ><a class="post-tag-summary" href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="">心理学</a></div></div>
-
-<article class="summary summary-animation" itemscope itemtype="http://schema.org/Article" style="margin-bottom:0"><div class="article-text"><h2 class="summary-title" itemprop="name headline">
-            <a href="/%E4%BA%BA%E7%94%9F%E7%9A%84%E6%99%BA%E6%85%A7/" target="_blank">人生的智慧</a>
-        </h2><div class="post-meta summary-post-meta"><span class="post-author"><a href="https://neymar-jr.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><span class="svg-icon icon-user"></span>ChrisLiu</a></span><span class="post-publish"><i class="svg-icon icon-clock"></i><time class="timeago" datetime="2021-03-21">2021-03-21</time></span><span class="post-category">
-                <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><i class="svg-icon icon-folder"></i>读书笔记</a>
-            </span></div><div class="content summary-content"></div></div>
-</article>
-
-<div class="post-tags-summary-under-footer"><div class="post-tags-summary-under-footer-display" ><a class="post-tag-summary" href="/tags/%E6%80%9D%E8%80%83/" style="">思考</a></div></div>
-
-<article class="summary summary-animation" itemscope itemtype="http://schema.org/Article" style="margin-bottom:0"><div class="article-text"><h2 class="summary-title" itemprop="name headline">
+            <article class="summary summary-animation" itemscope itemtype="http://schema.org/Article" style="margin-bottom:0"><div class="article-text"><h2 class="summary-title" itemprop="name headline">
             <a href="/3%E6%9C%8821%E6%97%A5%E6%80%BB%E7%BB%93/" target="_blank">3月21日总结</a>
         </h2><div class="post-meta summary-post-meta"><span class="post-author"><a href="https://neymar-jr.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><span class="svg-icon icon-user"></span>ChrisLiu</a></span><span class="post-publish"><i class="svg-icon icon-clock"></i><time class="timeago" datetime="2021-03-21">2021-03-21</time></span><span class="post-category">
                 <a href="/categories/2021%E6%80%9D%E8%80%83/"><i class="svg-icon icon-folder"></i>2021思考</a>
@@ -175,6 +145,33 @@
 
 <div class="post-tags-summary-under-footer"><div class="post-tags-summary-under-footer-display" ><a class="post-tag-summary" href="/tags/%E6%80%9D%E8%80%83/" style="">思考</a></div></div>
 
+<article class="summary summary-animation" itemscope itemtype="http://schema.org/Article" style="margin-bottom:0"><div class="article-text"><h2 class="summary-title" itemprop="name headline">
+            <a href="/11%E6%9C%8822%E6%97%A5%E6%80%BB%E7%BB%93/" target="_blank">11月22日总结</a>
+        </h2><div class="post-meta summary-post-meta"><span class="post-author"><a href="https://neymar-jr.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><span class="svg-icon icon-user"></span>ChrisLiu</a></span><span class="post-publish"><i class="svg-icon icon-clock"></i><time class="timeago" datetime="2020-11-22">2020-11-22</time></span><span class="post-category">
+                <a href="/categories/2020%E6%80%9D%E8%80%83/"><i class="svg-icon icon-folder"></i>2020思考</a>
+            </span></div><div class="content summary-content">狄时禹先走一步了，看起来是个短暂别离，但是谁知道这次别离有多久呢，我没有莫愁前路无知己，天下谁人不知君的洒脱，人生的别离再正常不过，我们很难</div></div>
+</article>
+
+<div class="post-tags-summary-under-footer"><div class="post-tags-summary-under-footer-display" ><a class="post-tag-summary" href="/tags/%E6%80%9D%E8%80%83/" style="">思考</a></div></div>
+
+<article class="summary summary-animation" itemscope itemtype="http://schema.org/Article" style="margin-bottom:0"><div class="article-text"><h2 class="summary-title" itemprop="name headline">
+            <a href="/11%E6%9C%8820%E6%97%A5%E6%80%BB%E7%BB%93/" target="_blank">11月20日总结</a>
+        </h2><div class="post-meta summary-post-meta"><span class="post-author"><a href="https://neymar-jr.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><span class="svg-icon icon-user"></span>ChrisLiu</a></span><span class="post-publish"><i class="svg-icon icon-clock"></i><time class="timeago" datetime="2020-11-20">2020-11-20</time></span><span class="post-category">
+                <a href="/categories/2020%E6%80%9D%E8%80%83/"><i class="svg-icon icon-folder"></i>2020思考</a>
+            </span></div><div class="content summary-content">离考研还有35天。 要多提升专注力，才能记住东西，尽可能进入心流模式，这是唯一的途径了。 事情总是会比想象中的多，计划总是会被一些无缘无故的琐事</div></div>
+</article>
+
+<div class="post-tags-summary-under-footer"><div class="post-tags-summary-under-footer-display" ><a class="post-tag-summary" href="/tags/%E6%80%9D%E8%80%83/" style="">思考</a></div></div>
+
+<article class="summary summary-animation" itemscope itemtype="http://schema.org/Article" style="margin-bottom:0"><div class="article-text"><h2 class="summary-title" itemprop="name headline">
+            <a href="/11%E6%9C%884%E6%97%A5%E6%80%BB%E7%BB%93/" target="_blank">11月4日总结</a>
+        </h2><div class="post-meta summary-post-meta"><span class="post-author"><a href="https://neymar-jr.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><span class="svg-icon icon-user"></span>ChrisLiu</a></span><span class="post-publish"><i class="svg-icon icon-clock"></i><time class="timeago" datetime="2020-11-04">2020-11-04</time></span><span class="post-category">
+                <a href="/categories/2020%E6%80%9D%E8%80%83/"><i class="svg-icon icon-folder"></i>2020思考</a>
+            </span></div><div class="content summary-content">2000年1月24日到今天，自己已经快要21岁了，人生不能一直低估，也该振作起来了，想想自己当初进学校斗志昂扬，自信满满，觉得自己什么都能做</div></div>
+</article>
+
+<div class="post-tags-summary-under-footer"><div class="post-tags-summary-under-footer-display" ><a class="post-tag-summary" href="/tags/%E6%80%9D%E8%80%83/" style="">思考</a></div></div>
+
 <ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -193,17 +190,17 @@
                     </span>
                 </li></ul></div></div>
                 </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://ublogger.netlify.app/?utm_source=https://neymar-jr.github.io&utm_medium=footer&utm_campaign=config&utm_term=2.0.1" target="_blank" title="uBlogger 2.0.1">uBlogger</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://ublogger.netlify.app/?utm_source=https://neymar-jr.github.io&utm_medium=footer&utm_campaign=config&utm_term=2.0.1" target="_blank" title="uBlogger 2.0.1">uBlogger</a>
                 </div><div class="footer-line"><i class="svg-icon icon-copyright"></i><span>2021</span><span class="author">&nbsp;<a href="https://neymar-jr.github.io" target="_blank">ChrisLiu</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
                 <i class="svg-icon icon-arrow-up"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="svg-icon icon-comments-fixed"></i>
             </a>
-        </div><script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script src="/js/theme.min.js"></script><script>
+        </div><script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script><script>
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
             m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");

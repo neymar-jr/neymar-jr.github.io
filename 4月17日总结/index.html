@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noodp"/><title>4月17日总结 | </title><meta name="twitter:card" content="summary_large_image"/>
@@ -12,8 +12,8 @@
 <meta property="article:published_time" content="2021-04-17T22:22:58&#43;08:00" />
 <meta property="article:modified_time" content="2021-04-17T22:22:58&#43;08:00" />
 
-<meta name="application-name" content="uBlogger">
-<meta name="apple-mobile-web-app-title" content="uBlogger"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="求索">
+<meta name="apple-mobile-web-app-title" content="求索"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
@@ -22,7 +22,7 @@
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "headline": "4月17日总结",
-        "inLanguage": "en",
+        "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/neymar-jr.github.io\/4%E6%9C%8817%E6%97%A5%E6%80%BB%E7%BB%93\/"
@@ -47,7 +47,7 @@
         "itemListElement": [{
             "@type": "ListItem",
             "position": 1,
-            "name": "Home",
+            "name": "主页",
             "item": "https:\/\/neymar-jr.github.io"
         },{
             "@type": "ListItem",
@@ -71,26 +71,27 @@
         <div class="menu">
             <nav>
                 <ul class="menu-inner"><li>
-                        <a class="menu-item" href="/posts/"> Posts </a>
+                        <a class="menu-item" href="/posts/"> 文章 </a>
                     </li><li>
-                        <a class="menu-item" href="/tags/"> Tags </a>
+                        <a class="menu-item" href="/tags/"> 标签 </a>
                     </li><li>
                         <a class="menu-item" href="/categories/"> Categories </a>
                     </li><li>
                         <a class="menu-item" href="/about/"> About </a>
                     </li></ul>
-            </nav><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+            </nav><span class="menu-item delimiter"></span><span onclick="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/4%E6%9C%8817%E6%97%A5%E6%80%BB%E7%BB%93/" selected>简体中文</option></select>
+                    </span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <span class="svg-icon icon-search"></span>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
                             <span class="svg-icon icon-cancel"></span>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <span class="svg-icon icon-loading"></span>
                         </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <span class="svg-icon icon-moon"></span>
                 </a>
             </div>
@@ -107,11 +108,11 @@
         </div>
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
                             <span class="svg-icon icon-search"></span>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
                             <span class="svg-icon icon-cancel"></span>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
@@ -119,22 +120,23 @@
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        Cancel
+                        取消
                     </a>
                 </div><nav>
                 <ul><li>
-                        <a class="menu-item" href="/posts/" title="">Posts</a>
+                        <a class="menu-item" href="/posts/" title="">文章</a>
                     </li><li>
-                        <a class="menu-item" href="/tags/" title="">Tags</a>
+                        <a class="menu-item" href="/tags/" title="">标签</a>
                     </li><li>
                         <a class="menu-item" href="/categories/" title="">Categories</a>
                     </li><li>
                         <a class="menu-item" href="/about/" title="">About</a>
                     </li></ul>
             </nav>
-            <a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <span class="svg-icon icon-moon"></span>
-            </a></div>
+            </a><span onclick="javascript:void(0);" class="menu-item" title="选择语言">简体中文<select class="language-select" onchange="location = this.value;"><option value="/4%E6%9C%8817%E6%97%A5%E6%80%BB%E7%BB%93/" selected>简体中文</option></select>
+                </span></div>
     </div>
 </header><div class="search-dropdown desktop">
     <div id="search-dropdown-desktop"></div>
@@ -143,7 +145,7 @@
     <div id="search-dropdown-mobile"></div>
 </div><main class="main">
 <div class="container content-article page-toc theme-classic"><div class="toc" id="toc-auto">
-            <div class="toc-title">Contents</div>
+            <div class="toc-title">目录</div>
             <div class="toc-content" id="toc-content-auto"></div>
         </div>
     
@@ -158,7 +160,7 @@
                 <div class="post-all-meta">
                     <nav class="breadcrumbs">
     <ol>
-        <li><a href="/">Home </a></li><li><a href="/categories/2021%E6%80%9D%E8%80%83/">2021思考 </a></li><li>4月17日总结</li>
+        <li><a href="/">主页 </a></li><li><a href="/categories/2021%E6%80%9D%E8%80%83/">2021思考 </a></li><li>4月17日总结</li>
     </ol>
 </nav>
                     <h1 class="single-title flipInX">4月17日总结</h1><div class="post-meta">
@@ -167,10 +169,10 @@
                             </span><span class="post-meta-date">
                                 <i class="svg-icon icon-clock"></i><time class="timeago" datetime="2021-04-17">2021-04-17</time>
                             </span><span class="post-meta-words">
-                                <i class="svg-icon icon-pencil"></i>324 words
+                                <i class="svg-icon icon-pencil"></i>约 324 字
                             </span>
                             <span class="post-meta-reading">
-                                <i class="svg-icon icon-stopwatch"></i>One minute
+                                <i class="svg-icon icon-stopwatch"></i>预计阅读 1 分钟
                             </span>
                         </div>
                     </div>
@@ -186,7 +188,7 @@
 
         <div class="post"><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
-                    <span>Contents</span>
+                    <span>目录</span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
             </div><p>​</p>
@@ -211,17 +213,17 @@
             </noscript></div></div></div>
 
 </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://ublogger.netlify.app/?utm_source=https://neymar-jr.github.io&utm_medium=footer&utm_campaign=config&utm_term=2.0.1" target="_blank" title="uBlogger 2.0.1">uBlogger</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://ublogger.netlify.app/?utm_source=https://neymar-jr.github.io&utm_medium=footer&utm_campaign=config&utm_term=2.0.1" target="_blank" title="uBlogger 2.0.1">uBlogger</a>
                 </div><div class="footer-line"><i class="svg-icon icon-copyright"></i><span>2021</span><span class="author">&nbsp;<a href="https://neymar-jr.github.io" target="_blank">ChrisLiu</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
                 <i class="svg-icon icon-arrow-up"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="svg-icon icon-comments-fixed"></i>
             </a>
-        </div><script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"neymar-jr/neymar-jr.github.io.comment"}},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script src="/js/theme.min.js"></script><script>
+        </div><script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"neymar-jr/neymar-jr.github.io.comment"}},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script><script>
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
             m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");

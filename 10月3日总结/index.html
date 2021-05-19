@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noodp"/><title>10月3日总结 | </title><meta name="twitter:card" content="summary_large_image"/>
@@ -12,8 +12,8 @@
 <meta property="article:published_time" content="2020-10-03T20:55:22&#43;08:00" />
 <meta property="article:modified_time" content="2020-10-03T20:55:22&#43;08:00" />
 
-<meta name="application-name" content="uBlogger">
-<meta name="apple-mobile-web-app-title" content="uBlogger"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="求索">
+<meta name="apple-mobile-web-app-title" content="求索"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
@@ -22,7 +22,7 @@
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "headline": "10月3日总结",
-        "inLanguage": "en",
+        "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/neymar-jr.github.io\/10%E6%9C%883%E6%97%A5%E6%80%BB%E7%BB%93\/"
@@ -47,7 +47,7 @@
         "itemListElement": [{
             "@type": "ListItem",
             "position": 1,
-            "name": "Home",
+            "name": "主页",
             "item": "https:\/\/neymar-jr.github.io"
         },{
             "@type": "ListItem",
@@ -71,26 +71,27 @@
         <div class="menu">
             <nav>
                 <ul class="menu-inner"><li>
-                        <a class="menu-item" href="/posts/"> Posts </a>
+                        <a class="menu-item" href="/posts/"> 文章 </a>
                     </li><li>
-                        <a class="menu-item" href="/tags/"> Tags </a>
+                        <a class="menu-item" href="/tags/"> 标签 </a>
                     </li><li>
                         <a class="menu-item" href="/categories/"> Categories </a>
                     </li><li>
                         <a class="menu-item" href="/about/"> About </a>
                     </li></ul>
-            </nav><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+            </nav><span class="menu-item delimiter"></span><span onclick="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/10%E6%9C%883%E6%97%A5%E6%80%BB%E7%BB%93/" selected>简体中文</option></select>
+                    </span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <span class="svg-icon icon-search"></span>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
                             <span class="svg-icon icon-cancel"></span>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <span class="svg-icon icon-loading"></span>
                         </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <span class="svg-icon icon-moon"></span>
                 </a>
             </div>
@@ -107,11 +108,11 @@
         </div>
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
                             <span class="svg-icon icon-search"></span>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
                             <span class="svg-icon icon-cancel"></span>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
@@ -119,22 +120,23 @@
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        Cancel
+                        取消
                     </a>
                 </div><nav>
                 <ul><li>
-                        <a class="menu-item" href="/posts/" title="">Posts</a>
+                        <a class="menu-item" href="/posts/" title="">文章</a>
                     </li><li>
-                        <a class="menu-item" href="/tags/" title="">Tags</a>
+                        <a class="menu-item" href="/tags/" title="">标签</a>
                     </li><li>
                         <a class="menu-item" href="/categories/" title="">Categories</a>
                     </li><li>
                         <a class="menu-item" href="/about/" title="">About</a>
                     </li></ul>
             </nav>
-            <a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <span class="svg-icon icon-moon"></span>
-            </a></div>
+            </a><span onclick="javascript:void(0);" class="menu-item" title="选择语言">简体中文<select class="language-select" onchange="location = this.value;"><option value="/10%E6%9C%883%E6%97%A5%E6%80%BB%E7%BB%93/" selected>简体中文</option></select>
+                </span></div>
     </div>
 </header><div class="search-dropdown desktop">
     <div id="search-dropdown-desktop"></div>
@@ -143,7 +145,7 @@
     <div id="search-dropdown-mobile"></div>
 </div><main class="main">
 <div class="container content-article page-toc theme-classic"><div class="toc" id="toc-auto">
-            <div class="toc-title">Contents</div>
+            <div class="toc-title">目录</div>
             <div class="toc-content" id="toc-content-auto"></div>
         </div>
     
@@ -158,7 +160,7 @@
                 <div class="post-all-meta">
                     <nav class="breadcrumbs">
     <ol>
-        <li><a href="/">Home </a></li><li><a href="/categories/2020%E6%80%9D%E8%80%83/">2020思考 </a></li><li>10月3日总结</li>
+        <li><a href="/">主页 </a></li><li><a href="/categories/2020%E6%80%9D%E8%80%83/">2020思考 </a></li><li>10月3日总结</li>
     </ol>
 </nav>
                     <h1 class="single-title flipInX">10月3日总结</h1><div class="post-meta">
@@ -167,10 +169,10 @@
                             </span><span class="post-meta-date">
                                 <i class="svg-icon icon-clock"></i><time class="timeago" datetime="2020-10-03">2020-10-03</time>
                             </span><span class="post-meta-words">
-                                <i class="svg-icon icon-pencil"></i>1377 words
+                                <i class="svg-icon icon-pencil"></i>约 1377 字
                             </span>
                             <span class="post-meta-reading">
-                                <i class="svg-icon icon-stopwatch"></i>3 minutes
+                                <i class="svg-icon icon-stopwatch"></i>预计阅读 3 分钟
                             </span>
                         </div>
                     </div>
@@ -186,7 +188,7 @@
 
         <div class="post"><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
-                    <span>Contents</span>
+                    <span>目录</span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
             </div><p>最近是十一假期，信息院球队的学长从五湖四海回到长沙，见到他们还是感到非常亲切，可能是分开的时间没有很长，对每个学长还是非常熟悉，见到他们更多的是一种很自然亲切的感觉，曹8，彤哥，大黄，凯哥，黄刈，大帝，椅子，还有17级和18级的大家，这两天晚上都参与了聚餐，其中有几个学长和学弟给我的印象非常深刻，首先是黄未名学长，以前一直以来给我的印象都是经常来踢球嘴人，一副玩世不恭的样子，但他酒桌上说的关于他那段考研经历的一席话给我很大的冲击，首先他一直强调他认识到他自己不是个聪明的人，这就带给我很大的震撼，在这个竞争意识非常普遍且强烈的社会，能放低自己，承认自己的不足是非常需要勇气而且难能可贵的，他能非常坦然的说出来，确实是非常成熟了。再者，黄学长说了他自己考研时每天的安排，一天学习14个小时，遇到不会的题，不慌，先用手机把题拍下来，等到吃饭或者休息的时候拿出来看看，想一想，再不会，晚上睡觉之前冥想回顾，并且要做到知其然并且知其所以然，他给我建议一定不要眼高手低，做题的时候一定要按照考试的标准认真把步骤写出来，做完对照答案仔细复盘哪一步错了，分析为什么错。反思自己有时候以智商稍高自居，其实这是自己不想努力的借口。之后就是黄学长的人生观非常通透，为什么用通透这个词，我发现从他的人生哲学中我感受到了他对人生和为人处世的思考，几句简单的话却非常有道理，1.就比如踢球，我把我的优点发挥出来嘛，尽量找到一个踢法减少暴露自己的缺点嘛，比如我速度慢，我就少带球嘛，拿球就传，不然别人知道我速度慢。再有就是他对足球和学习的态度，踢球是不影响学习的，没见过哪个人因为踢球导致学习不好的，他自己也确实是个证明，只要把时间安排好，该学习的时候就高效学习，那玩的时候就可以放纵的玩。本质上就是把时间安排好利用好。第二个印象深刻的人是彤哥，每每跟彤哥说话就总是有种莫名的感动，可能也是见到了很少的一些内心仍然保持着最初的那份单纯，即使经历了很多黑暗的事情，最后仍然能保留着一方净土，真的是很难能可贵的，包括曹博号也是重情义且单纯的人，彤哥说他是个理想主义者，诚然，他说好多次都梦见自己没赶上火车，他真的太想大家了，能感受到这份兄弟间的情谊，真的非常感动，男人之间的感情真的非常坚固，很多非常艰辛的困难都无法让一个男人落泪，而往往是兄弟间的一句关心问候，一个善意的帮助，就能轻易击穿内心的壁垒，流露出最柔软的内芯。我能想象到学长们毕业开始工作后，烦恼越来越多，发现大学的种种情谊是那么宝贵，凯哥也抽了烟，本就沉默寡言的凯哥现在更是多了几分愁容，更多时候就是坐在角落里默默抽着烟，彬才学长还是那么谦虚，对学弟也是非常照顾和尊敬，我一直觉得自己之前有点愧疚，没有表现得那么尊敬他。说回彤哥，彤哥说对自己还是有信心的，也衷心的希望我能考上研弥补自己的所谓的遗憾，他说，做到考完研，无论结果怎么样，对自己不会说后悔，我很多时候都深陷后悔和自责的泥潭，彤哥也希望我能少些自责，自己其实也做到了很多东西，他一直也说我来实验室的时运不太好，他希望我以后无论做什么事，把人的主观能动性发挥到最大，无论时运如何，把自己做到最好，不留遗憾。我想自己也应该尽全力去做些什么，无论结果如何，只想给自己一段回忆，每每想起来，心中充满的是充实和感动，就像大黄学长一样，可以跟学弟非常骄傲和自豪的说出来！</p>
@@ -211,17 +213,17 @@
             </noscript></div></div></div>
 
 </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://ublogger.netlify.app/?utm_source=https://neymar-jr.github.io&utm_medium=footer&utm_campaign=config&utm_term=2.0.1" target="_blank" title="uBlogger 2.0.1">uBlogger</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://ublogger.netlify.app/?utm_source=https://neymar-jr.github.io&utm_medium=footer&utm_campaign=config&utm_term=2.0.1" target="_blank" title="uBlogger 2.0.1">uBlogger</a>
                 </div><div class="footer-line"><i class="svg-icon icon-copyright"></i><span>2021</span><span class="author">&nbsp;<a href="https://neymar-jr.github.io" target="_blank">ChrisLiu</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
                 <i class="svg-icon icon-arrow-up"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="svg-icon icon-comments-fixed"></i>
             </a>
-        </div><script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"neymar-jr/neymar-jr.github.io.comment"}},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script src="/js/theme.min.js"></script><script>
+        </div><script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script src="/lib/lunr/lunr.stemmer.support.min.js"></script><script src="/lib/lunr/lunr.zh.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"neymar-jr/neymar-jr.github.io.comment"}},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script><script>
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
             m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
