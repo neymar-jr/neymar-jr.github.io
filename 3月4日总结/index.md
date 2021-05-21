@@ -1,7 +1,11 @@
 # 3月4日总结
 
 
-INTJ 的痛苦来源于哪里，又应该怎样解决? https://www.zhihu.com/question/389163913/answer/1417576579
+<!--more-->	
+
+INTJ 的痛苦来源于哪里，又应该怎样解决? 
+
+https://www.zhihu.com/question/389163913/answer/1417576579
 
  
 

@@ -1,7 +1,11 @@
 # INTJ划分
 
 
-低阶、中阶、高阶的INTJ分别是怎么样的？ - 沉香的回答 - 知乎 https://www.zhihu.com/question/394452710/answer/1732110212
+<!--more-->
+
+低阶、中阶、高阶的INTJ分别是怎么样的？ -
+
+沉香的回答 - 知乎 https://www.zhihu.com/question/394452710/answer/1732110212
 
 
 
